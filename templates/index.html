@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Webcam Feed</title>
+</head>
+<body>
+    <h1>Live Webcam Feed</h1>
+    <img id="webcam-image" alt="Webcam Feed">
+    <script>
+        // JavaScript code to update the image src
+        const imgElement = document.getElementById("webcam-image");
+        const source = new EventSource("{{ url_for('video_feed') }}");
+
+        source.onmessage = function(event) {
+            imgElement.src = "data:image/jpeg;base64," + event.data;
+        };
+    </script>
+</body>
+</html>
