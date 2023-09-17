@@ -1,1 +1,1 @@
-# sleepy
+Welcome to sleepy.py! We are an AI-powered tool meant to assist you in your studies. To use, run sleepy.py in the master branch. Be sure to give permission for the program to use your camera. Also feel free to check out app.py, our frontend in progress!
